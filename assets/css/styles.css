@@ -75,121 +75,90 @@ h2 {
 }
 
 /* Estilo para el navbar */
-.navbar {
-    background-color: #52AFA4;
+/* Estilo para el navbar transparente */
+.navbar-transparent {
+    background-color: transparent !important;
+    backdrop-filter: blur(5px);
+    /* Opcional: desenfoque para un efecto moderno */
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 
-/* Estilo para la marca del navbar */
-.navbar-brand {
-    color: #ffffff;
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    margin-right: 15px;
+/* Asegurar legibilidad del texto y logo */
+.navbar-brand,
+.nav-link,
+.btn-language-toggle {
+    color: #ffffff !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    /* Sombra para contraste */
 }
 
-.navbar-brand img {
-    margin-right: 10px;
-    transition: transform 0.3s ease;
-}
-
-.navbar-brand:hover img {
-    transform: scale(1.1);
-}
-
-/* Estilo para los enlaces del navbar */
-.nav-link {
-    color: #ffffff;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    padding: 10px 15px;
-    transition: font-weight 0.3s ease;
-}
-
-/* Efecto hover y active para los enlaces */
+/* Estilo para los enlaces en hover y active */
 .nav-link:hover,
-.nav-link:active {
-    font-weight: 700;
-}
-
-/* Estilo para el enlace activo */
 .nav-link.active {
     font-weight: 700;
+    color: #f8f9fa !important;
 }
 
-/* Estilo para el botón de hamburguesa */
+/* Botón hamburguesa */
 .navbar-toggler {
     border: none;
     padding: 5px;
+    background-color: rgba(82, 175, 164, 0.3);
+    /* Fondo ligero para visibilidad */
 }
 
+/* Icono del toggler (líneas blancas) */
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-/* Estilo para el botón de idioma */
+/* Botón de idioma */
 .btn-language-toggle {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(82, 175, 164, 0.3);
     color: #ffffff;
     font-family: "Roboto", sans-serif;
     font-size: 0.9rem;
     padding: 5px 10px;
     border: 1px solid #ffffff;
     border-radius: 5px;
-    text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn-language-toggle:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(82, 175, 164, 0.5);
     color: #f8f9fa;
 }
 
-/* Responsividad para el navbar */
+/* Menú colapsado en móviles */
 @media (max-width: 991px) {
-    .navbar-brand {
-        font-size: 0.9rem;
+    .navbar-collapse {
+        background-color: rgba(82, 175, 164, 0.9);
+        /* Fondo semitransparente en móviles */
+        padding: 10px;
+        border-radius: 5px;
     }
 
-    .navbar-brand img {
-        width: 70px;
-        height: 50px;
-    }
-
-    .nav-link {
-        font-size: 0.9rem;
-        padding: 8px 10px;
-        text-align: center;
-    }
-
+    .nav-link,
     .btn-language-toggle {
-        width: 100%;
-        margin: 10px 0;
         text-align: center;
+        width: 100%;
+        margin: 5px 0;
     }
 }
 
-@media (max-width: 576px) {
-    .navbar-brand {
-        font-size: 0.8rem;
-    }
-
-    .navbar-brand img {
-        width: 50px;
-        height: 40px;
-    }
-
-    .navbar-toggler {
-        padding: 3px;
-    }
-
-    .btn-language-toggle {
-        font-size: 0.8rem;
-        padding: 4px 8px;
-    }
+/* Aumentar opacidad del overlay del carrusel para legibilidad */
+.carousel-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Aumentado de 0.7 a 0.8 */
+    z-index: 1;
 }
 
 section.contenedor.bg-custom,
@@ -210,8 +179,60 @@ section.cards.bg-custom,
     padding: 5px;
 }
 
+/* Contenedor del video para móviles */
+.mobile-video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 177.78%;
+    /* Proporción 9:16 para video vertical */
+    display: none;
+    /* Oculto por defecto */
+}
+
+/* Mostrar video solo en móviles */
+@media (max-width: 991px) {
+    .mobile-video-container {
+        display: block !important;
+    }
+}
+
+/* Video */
+.carousel-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+}
+
+/* Carrusel solo para escritorio */
+.carousel-desktop {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #000;
+}
+
+/* Ocultar carrusel en móviles */
+@media (max-width: 991px) {
+    .carousel-desktop {
+        display: none !important;
+    }
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+}
+
 .carousel-item {
     position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    /* Proporción 16:9 para imágenes */
 }
 
 .carousel-item::before {
@@ -225,8 +246,14 @@ section.cards.bg-custom,
     z-index: 1;
 }
 
-.carousel-item img {
-    position: relative;
+.carousel-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     z-index: 0;
 }
 
@@ -238,6 +265,8 @@ section.cards.bg-custom,
     z-index: 10;
     color: white;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+    text-align: center;
+    width: 90%;
 }
 
 .texto-overlay h3 {
@@ -248,6 +277,18 @@ section.cards.bg-custom,
     white-space: nowrap;
     margin: 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 991px) {
+    .texto-overlay h3 {
+        font-size: 30px;
+        white-space: normal;
+    }
+}
+
+/* Fondo del body */
+body {
+    background-color: #000;
 }
 
 .counter-section {
@@ -295,6 +336,10 @@ section.cards.bg-custom,
     height: 400px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+.team-section.bg-custom {
+    background-color: #52AFA4;
 }
 
 .team-member {
