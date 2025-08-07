@@ -43,8 +43,20 @@
                             data-i18n="navbar.about">Quienes somos</a></li>
                     <li class="nav-item"><a class="nav-link text-white roboto-regular" href="#equipo"
                             data-i18n="navbar.team">Equipo</a></li>
-                    <li class="nav-item"><a class="nav-link text-white roboto-regular" href="#proyectos"
-                            data-i18n="navbar.projects">Proyectos</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-white roboto-regular dropdown-toggle" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                            data-i18n="navbar.projects">Proyectos</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item roboto-regular" href="#proyectos">
+                                    Todos</a></li>
+                            <li><a class="dropdown-item roboto-regular" href="Proyecto1.html">
+                                    Recolección de Aceite</a></li>
+                            <li><a class="dropdown-item roboto-regular" href="proyecto2.html">Actividades Medio
+                                    Ambientales</a></li>
+                            <li><a class="dropdown-item roboto-regular" href="proyecto3.html">Aulas Libres</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item"><a class="nav-link text-white roboto-regular" href="#destacados"
                             data-i18n="navbar.alliances">Alianzas</a></li>
                     <li class="nav-item"><a class="nav-link text-white roboto-regular" href="#contacto"
@@ -63,13 +75,13 @@
         <!-- Video solo para móviles -->
         <div class="mobile-video-container">
             <video class="carousel-video video-mobile" autoplay muted loop playsinline preload="auto">
-                <source src="/assets/video/1000018006-1.mp4" type="video/mp4">
+                <source src="/assets/video/60Ea4102-C9ac-42C6-9A01-Ed24c4c3a319-1-1.mp4" type="video/mp4">
                 Tu navegador no soporta el video.
             </video>
         </div>
 
         <!-- Carrusel solo para escritorio -->
-        <div id="carouselExampleAutoplaying" class="carousel slide carousel-desktop">
+        <div id="carouselExampleAutoplaying" class="carousel slide carousel-desktop" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="assets/img/IRA_6059.JPG" class="carousel-img d-block w-100" alt="Imagen de carrusel">
@@ -161,7 +173,7 @@
                     <div class="counter-label" data-i18n="counter.volunteers">Voluntarios involucrados</div>
                 </div>
                 <div class="col-md-4">
-                    <div class="counter" data-target="10000">0</div>
+                    <div class="counter" data-target="1500">0</div>
                     <div class="counter-label" data-i18n="counter.waste">Kilos de basura recolectados</div>
                 </div>
             </div>
@@ -176,7 +188,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-3 col-sm-6 team-member">
-                    <img src="assets/img/Felipe.jpg" alt="Felipe Altamirano" class="rounded-circle team-img">
+                    <img src="assets/img/Abogado (2).jpeg" alt="Felipe Altamirano" class="rounded-circle team-img">
                     <h5 class="mt-3 roboto-bold" data-i18n="team.felipe.name">Felipe Altamirano</h5>
                     <p class="roboto-regular" data-i18n="team.felipe.role">Fundador & CEO</p>
                 </div>
@@ -191,9 +203,9 @@
                     <p class="roboto-regular" data-i18n="team.cesar.role">Director deportivo</p>
                 </div>
                 <div class="col-md-3 col-sm-6 team-member">
-                    <img src="assets/img/Fabian.jpeg" alt="Fabian González" class="rounded-circle team-img">
-                    <h5 class="mt-3 roboto-bold" data-i18n="team.fabian.name">Fabian González</h5>
-                    <p class="roboto-regular" data-i18n="team.fabian.role">Estudio Jurídico</p>
+                    <img src="assets/img/Abogado (1).jpeg" alt="Fabian González" class="rounded-circle team-img">
+                    <h5 class="mt-3 roboto-bold" data-i18n="team.fabian.name">Mauricio Suazo</h5>
+                    <p class="roboto-regular" data-i18n="team.fabian.role">Abogado</p>
                 </div>
             </div>
         </div>
@@ -207,7 +219,10 @@
             <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
                 <div class="col">
                     <div class="card h-100">
-                        <img src="assets/img/ACEITE.jpg" class="card-img-top" alt="Campaña recolección de aceite">
+                        <a href="Proyecto1.html">
+                            <img src="assets/img/ACEITE.jpg" class="card-img-top proyecto-img"
+                                alt="Campaña recolección de aceite">
+                        </a>
                         <div class="card-body">
                             <h5 class="card-title roboto-bold" data-i18n="projects.oil.title">Campaña recolección de
                                 aceite</h5>
@@ -221,7 +236,10 @@
                 </div>
                 <div class="col">
                     <div class="card h-100">
-                        <img src="assets/img/image00003.jpeg" class="card-img-top" alt="Limpieza de playas">
+                        <a href="proyecto2.html">
+                            <img src="assets/img/image00003.jpeg" class="card-img-top proyecto-img"
+                                alt="Limpieza de playas">
+                        </a>
                         <div class="card-body">
                             <h5 class="card-title roboto-bold" data-i18n="projects.beach.title">Actividades Medio
                                 Ambientales</h5>
@@ -235,7 +253,10 @@
                 </div>
                 <div class="col">
                     <div class="card h-100">
-                        <img src="assets/img/image00020.jpeg" class="card-img-top" alt="Educación ambiental">
+                        <a href="proyecto3.html">
+                            <img src="assets/img/image00020.jpeg" class="card-img-top proyecto-img"
+                                alt="Educación ambiental">
+                        </a>
                         <div class="card-body">
                             <h5 class="card-title roboto-bold" data-i18n="projects.carpe.title">Corporación Educativa
                                 Carpe Diem</h5>

@@ -114,6 +114,39 @@ h2 {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
+/* Estilos para el dropdown */
+.dropdown-menu {
+    background-color: #52AFA4;
+    opacity: 80%;
+    /* Fondo blanco para el dropdown */
+    border: none;
+    /* Opcional: quitar borde */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+}
+
+.dropdown-item {
+    color: #ffffff;
+    /* Color del texto */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    /* Roboto regular */
+}
+
+.dropdown-item:hover {
+    background-color: #52AFA4;
+    /* Fondo al pasar el mouse */
+    color: #274b61;
+}
+
+/* Ajustes para móvil */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        width: 100%;
+        /* Ocupa todo el ancho en móvil */
+    }
+}
+
 /* Botón de idioma */
 .btn-language-toggle {
     background-color: rgba(82, 175, 164, 0.3);
@@ -216,6 +249,13 @@ section.cards.bg-custom,
     background-color: #000;
 }
 
+.carousel-proyecto1 {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
 /* Ocultar carrusel en móviles */
 @media (max-width: 991px) {
     .carousel-desktop {
@@ -234,6 +274,8 @@ section.cards.bg-custom,
     padding-top: 56.25%;
     /* Proporción 16:9 para imágenes */
 }
+
+
 
 .carousel-item::before {
     content: '';
@@ -279,8 +321,39 @@ section.cards.bg-custom,
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.texto-overlay-proyectos {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+    text-align: center;
+    width: 90%;
+}
+
+.texto-overlay-proyectos h3 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 40px;
+    white-space: nowrap;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.proyecto-1 {
+    background-color: #ffffff;
+}
+
 @media (max-width: 991px) {
     .texto-overlay h3 {
+        font-size: 30px;
+        white-space: normal;
+    }
+
+    .texto-overlay-proyectos h3 {
         font-size: 30px;
         white-space: normal;
     }
@@ -389,6 +462,29 @@ body {
     .team-img {
         width: 130px;
         height: 130px;
+    }
+}
+
+/* Estilos para las imágenes de proyectos en las tarjetas */
+.proyecto-img {
+    transition: transform 0.2s;
+    /* Animación suave para interacción */
+}
+
+.proyecto-img:hover {
+    transform: scale(1.05);
+    /* Efecto al pasar el mouse (opcional) */
+    cursor: pointer;
+    /* Indica que es clickeable */
+}
+
+/* Ajustes para móvil */
+@media (max-width: 768px) {
+    .proyecto-img {
+        max-height: 200px;
+        /* Tamaño más pequeño en móvil */
+        object-fit: cover;
+        /* Mantiene proporciones */
     }
 }
 
@@ -701,4 +797,8 @@ body {
     .footer-section p {
         font-size: 0.9rem;
     }
+}
+
+.contenido-proyecto1 {
+    color: #274b61;
 }
