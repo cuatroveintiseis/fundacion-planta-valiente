@@ -84,7 +84,6 @@ p {
 .navbar-transparent {
     background-color: transparent !important;
     backdrop-filter: blur(5px);
-    /* Opcional: desenfoque para un efecto moderno */
     position: fixed;
     width: 100%;
     z-index: 1000;
@@ -96,7 +95,7 @@ p {
 .btn-language-toggle {
     color: #ffffff !important;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
-    /* Sombra para contraste */
+
 }
 
 /* Estilo para los enlaces en hover y active */
@@ -111,7 +110,7 @@ p {
     border: none;
     padding: 5px;
     background-color: rgba(82, 175, 164, 0.3);
-    /* Fondo ligero para visibilidad */
+
 }
 
 /* Icono del toggler (líneas blancas) */
@@ -123,24 +122,21 @@ p {
 .dropdown-menu {
     background-color: #52AFA4;
     opacity: 80%;
-    /* Fondo blanco para el dropdown */
     border: none;
-    /* Opcional: quitar borde */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Sombra suave */
+
 }
 
 .dropdown-item {
     color: #ffffff;
-    /* Color del texto */
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    /* Roboto regular */
+
 }
 
 .dropdown-item:hover {
     background-color: #52AFA4;
-    /* Fondo al pasar el mouse */
+
     color: #274b61;
 }
 
@@ -148,7 +144,7 @@ p {
 @media (max-width: 768px) {
     .dropdown-menu {
         width: 100%;
-        /* Ocupa todo el ancho en móvil */
+
     }
 }
 
@@ -173,7 +169,6 @@ p {
 @media (max-width: 991px) {
     .navbar-collapse {
         background-color: rgba(82, 175, 164, 0.9);
-        /* Fondo semitransparente en móviles */
         padding: 10px;
         border-radius: 5px;
     }
@@ -195,35 +190,26 @@ p {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
-    /* Aumentado de 0.7 a 0.8 */
     z-index: 1;
 }
 
 .btn-custom {
     background-color: #52AFA4;
-    /* Color de fondo (puedes cambiar el color) */
     border-radius: 25px;
-    /* Bordes redondeados */
     color: white;
-    /* Letras blancas */
     padding: 20px;
     margin-top: 20px;
-    /* Ajusta el padding si es necesario */
     text-decoration: none;
-    /* Elimina el subrayado del enlace */
     display: inline-block;
-    /* Asegura que el botón se comporte correctamente */
     transition: background-color 0.3s ease;
-    /* Transición suave para hover (opcional) */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Sombra para profundidad */
+
 }
 
 .btn-custom:hover {
     background-color: #274B61;
-    /* Color de fondo al pasar el ratón (opcional) */
     color: white;
-    /* Mantiene las letras blancas al hacer hover */
+
 }
 
 section.contenedor.bg-custom,
@@ -249,9 +235,8 @@ section.cards.bg-custom,
     position: relative;
     width: 100%;
     padding-top: 177.78%;
-    /* Proporción 9:16 para video vertical */
     display: none;
-    /* Oculto por defecto */
+
 }
 
 /* Mostrar video solo en móviles */
@@ -264,15 +249,10 @@ section.cards.bg-custom,
 .carousel-control-prev,
 .carousel-control-next {
     width: 50px;
-    /* Ajusta el ancho del área de clic */
     height: 50px;
-    /* Ajusta la altura del área de clic */
     top: 58%;
-    /* Centra verticalmente */
     transform: translateY(-50%);
-    /* Asegura el centrado vertical */
     z-index: 15;
-    /* Asegúrate de que esté por encima del overlay */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -281,20 +261,19 @@ section.cards.bg-custom,
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     width: 30px;
-    /* Ajusta el tamaño del ícono */
     height: 30px;
     background-size: 100% 100%;
-    /* Asegura que el ícono ocupe todo el espacio */
+
 }
 
 .carousel-control-prev {
     left: 50px;
-    /* Ajusta este valor para alejar del borde izquierdo */
+
 }
 
 .carousel-control-next {
     right: 50px;
-    /* Ajusta este valor para alejar del borde derecho */
+
 }
 
 /* Video */
@@ -324,16 +303,16 @@ section.cards.bg-custom,
     background-color: #ffffff;
 }
 
-/* Ajustar la altura del carrusel de Proyecto 1 para que sea más angosta */
+
 .carousel-proyecto1 .carousel-item {
     padding-top: 35%;
-    /* Proporción 21:9 para una altura más baja */
+
 }
 
-/* Mantener el ancho completo de la imagen */
+
 .carousel-proyecto1 .carousel-img {
     max-width: 100%;
-    /* Usar todo el ancho disponible */
+
     margin-left: auto;
     margin-right: auto;
 }
@@ -342,7 +321,7 @@ section.cards.bg-custom,
 @media (max-width: 991px) {
     .carousel-proyecto1 .carousel-item {
         padding-top: 75%;
-        /* Proporción 4:3 en móviles para mejor visibilidad */
+
     }
 }
 
@@ -367,7 +346,7 @@ section.cards.bg-custom,
     position: relative;
     width: 100%;
     padding-top: 56.25%;
-    /* Proporción 16:9 para imágenes */
+
 }
 
 
@@ -445,15 +424,10 @@ section.cards.bg-custom,
 
 .proyecto-1 img {
     border: 3px solid #52AFA4;
-    /* Borde de color */
     border-radius: 15px;
-    /* Esquinas redondeadas */
     max-width: 600px;
-    /* Tamaño máximo en pantallas grandes */
     width: 100%;
-    /* Ajustarse al contenedor */
     height: auto;
-    /* Mantener proporción */
     margin-left: auto;
     margin-right: auto;
 }
@@ -462,28 +436,24 @@ section.cards.bg-custom,
 @media (max-width: 768px) {
     .proyecto-1 {
         flex-direction: column;
-        /* Apilar imágenes verticalmente */
         align-items: center;
-        /* Centrar imágenes */
+
     }
 
     .proyecto-1 img {
         max-width: 90%;
-        /* Reducir el ancho para dejar márgenes laterales */
         margin-left: auto;
         margin-right: auto;
     }
 
     .contenido-proyecto1 {
         padding-left: 15px;
-        /* Margen lateral izquierdo */
         padding-right: 15px;
-        /* Margen lateral derecho */
+
     }
 
     .contenido-proyecto1 h2 {
         padding-left: 15px;
-        /* Margen lateral para el título */
         padding-right: 15px;
     }
 }
@@ -614,23 +584,21 @@ body {
 /* Estilos para las imágenes de proyectos en las tarjetas */
 .proyecto-img {
     transition: transform 0.2s;
-    /* Animación suave para interacción */
+
 }
 
 .proyecto-img:hover {
     transform: scale(1.05);
-    /* Efecto al pasar el mouse (opcional) */
     cursor: pointer;
-    /* Indica que es clickeable */
+
 }
 
 /* Ajustes para móvil */
 @media (max-width: 768px) {
     .proyecto-img {
         max-height: 200px;
-        /* Tamaño más pequeño en móvil */
         object-fit: cover;
-        /* Mantiene proporciones */
+
     }
 }
 
@@ -806,18 +774,15 @@ body {
     justify-content: center;
     align-items: center;
     padding: 15px;
-    /* Padding original para desktop */
     margin: 0;
-    /* Elimina márgenes */
+
 }
 
 .ally-carousel .row {
     flex-wrap: nowrap;
-    /* Logos en una sola fila para el carrusel */
     margin: 0;
-    /* Elimina márgenes de Bootstrap */
     gap: 0;
-    /* Elimina cualquier gap en la fila */
+
 }
 
 .ally-carousel .carousel-control-prev,
@@ -833,14 +798,13 @@ body {
     align-items: center;
     justify-content: center;
     opacity: 0;
-    /* Oculta flechas por defecto */
     transition: opacity 0.3s ease;
 }
 
 .ally-carousel:hover .carousel-control-prev,
 .ally-carousel:hover .carousel-control-next {
     opacity: 1;
-    /* Muestra flechas al pasar el mouse */
+
 }
 
 .ally-carousel .carousel-control-prev {
@@ -855,43 +819,35 @@ body {
 @media (max-width: 768px) {
     .ally-carousel .ally-img {
         width: 120px;
-        /* Logos más pequeños para tabletas */
         height: 120px;
     }
 
     .ally-carousel .ally-member {
         padding: 10px;
-        /* Padding reducido para tabletas */
+
     }
 }
 
 @media (max-width: 576px) {
     .ally-carousel .ally-img {
         width: 90px;
-        /* Logos más pequeños para móviles */
         height: 90px;
     }
 
     .ally-carousel .ally-member {
         flex: 0 0 auto;
-        /* Anula el ancho de Bootstrap para móviles */
         min-width: 80px;
-        /* Tamaño mínimo para que quepan 2-3 logos */
         padding: 0;
-        /* Sin padding en móviles */
         margin: 20px;
-        /* Sin márgenes */
+
     }
 
     .ally-carousel .col-sm-6 {
         flex: 0 0 auto;
-        /* Anula el 50% de col-sm-6 */
         width: auto;
-        /* Permite que el ancho sea dinámico */
         max-width: none;
-        /* Elimina restricciones de ancho máximo */
         padding: 0;
-        /* Elimina padding de columnas de Bootstrap */
+
     }
 }
 
@@ -899,7 +855,7 @@ body {
 .news {
     background-color: #f8f9fa;
     color: #274B61;
-    /* Fondo oscuro consistente con bg-custom */
+
 }
 
 .news h2 {
@@ -908,12 +864,10 @@ body {
 
 .news-card {
     background-color: #ffffff;
-    /* Fondo de las tarjetas */
     border-color: #8d8d8d98;
     border-radius: 10px;
     box-shadow: #000;
     color: #274b61;
-    /* Texto claro */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -1019,7 +973,6 @@ body {
 }
 
 .contact-links a:hover {
-    color: #28a745;
     font-weight: 700;
 }
 
