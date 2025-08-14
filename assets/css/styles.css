@@ -74,6 +74,11 @@ h2 {
     font-family: "Roboto", sans-serif;
 }
 
+/* Justificar todos los párrafos */
+p {
+    text-align: justify;
+}
+
 /* Estilo para el navbar */
 /* Estilo para el navbar transparente */
 .navbar-transparent {
@@ -194,6 +199,33 @@ h2 {
     z-index: 1;
 }
 
+.btn-custom {
+    background-color: #52AFA4;
+    /* Color de fondo (puedes cambiar el color) */
+    border-radius: 25px;
+    /* Bordes redondeados */
+    color: white;
+    /* Letras blancas */
+    padding: 20px;
+    margin-top: 20px;
+    /* Ajusta el padding si es necesario */
+    text-decoration: none;
+    /* Elimina el subrayado del enlace */
+    display: inline-block;
+    /* Asegura que el botón se comporte correctamente */
+    transition: background-color 0.3s ease;
+    /* Transición suave para hover (opcional) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Sombra para profundidad */
+}
+
+.btn-custom:hover {
+    background-color: #274B61;
+    /* Color de fondo al pasar el ratón (opcional) */
+    color: white;
+    /* Mantiene las letras blancas al hacer hover */
+}
+
 section.contenedor.bg-custom,
 section.cards.bg-custom,
 .team-section.bg-custom {
@@ -229,6 +261,42 @@ section.cards.bg-custom,
     }
 }
 
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px;
+    /* Ajusta el ancho del área de clic */
+    height: 50px;
+    /* Ajusta la altura del área de clic */
+    top: 58%;
+    /* Centra verticalmente */
+    transform: translateY(-50%);
+    /* Asegura el centrado vertical */
+    z-index: 15;
+    /* Asegúrate de que esté por encima del overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 30px;
+    /* Ajusta el tamaño del ícono */
+    height: 30px;
+    background-size: 100% 100%;
+    /* Asegura que el ícono ocupe todo el espacio */
+}
+
+.carousel-control-prev {
+    left: 50px;
+    /* Ajusta este valor para alejar del borde izquierdo */
+}
+
+.carousel-control-next {
+    right: 50px;
+    /* Ajusta este valor para alejar del borde derecho */
+}
+
 /* Video */
 .carousel-video {
     position: absolute;
@@ -256,10 +324,37 @@ section.cards.bg-custom,
     background-color: #ffffff;
 }
 
+/* Ajustar la altura del carrusel de Proyecto 1 para que sea más angosta */
+.carousel-proyecto1 .carousel-item {
+    padding-top: 35%;
+    /* Proporción 21:9 para una altura más baja */
+}
+
+/* Mantener el ancho completo de la imagen */
+.carousel-proyecto1 .carousel-img {
+    max-width: 100%;
+    /* Usar todo el ancho disponible */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 991px) {
+    .carousel-proyecto1 .carousel-item {
+        padding-top: 75%;
+        /* Proporción 4:3 en móviles para mejor visibilidad */
+    }
+}
+
 /* Ocultar carrusel en móviles */
 @media (max-width: 991px) {
     .carousel-desktop {
         display: none !important;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        display: none;
     }
 }
 
@@ -343,8 +438,54 @@ section.cards.bg-custom,
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.proyecto-1 {
-    background-color: #ffffff;
+
+.contenido-proyecto1 {
+    background-color: #f8f9fa;
+}
+
+.proyecto-1 img {
+    border: 3px solid #52AFA4;
+    /* Borde de color */
+    border-radius: 15px;
+    /* Esquinas redondeadas */
+    max-width: 600px;
+    /* Tamaño máximo en pantallas grandes */
+    width: 100%;
+    /* Ajustarse al contenedor */
+    height: auto;
+    /* Mantener proporción */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+    .proyecto-1 {
+        flex-direction: column;
+        /* Apilar imágenes verticalmente */
+        align-items: center;
+        /* Centrar imágenes */
+    }
+
+    .proyecto-1 img {
+        max-width: 90%;
+        /* Reducir el ancho para dejar márgenes laterales */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contenido-proyecto1 {
+        padding-left: 15px;
+        /* Margen lateral izquierdo */
+        padding-right: 15px;
+        /* Margen lateral derecho */
+    }
+
+    .contenido-proyecto1 h2 {
+        padding-left: 15px;
+        /* Margen lateral para el título */
+        padding-right: 15px;
+    }
 }
 
 @media (max-width: 991px) {
@@ -426,6 +567,11 @@ body {
     height: 150px;
     object-fit: cover;
     border: 2px solid #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.team-img:hover {
+    transform: scale(1.1);
 }
 
 .team-member h5 {
@@ -622,34 +768,200 @@ body {
     }
 }
 
-.ally-member {
-    text-align: center;
-    margin-bottom: 20px;
+/* Sección alianzas */
+.ally-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
-.ally-img {
+.ally-carousel .carousel-inner {
+    width: 100%;
+}
+
+.ally-carousel .carousel-item {
+    padding-top: 0;
+    position: relative;
+}
+
+.ally-carousel .carousel-item::before {
+    content: none;
+}
+
+.ally-carousel .ally-img {
     width: 150px;
     height: 150px;
-    object-fit: fill;
+    object-fit: contain;
     border: 3px solid #ffffff;
+    border-radius: 50%;
     transition: transform 0.3s ease;
 }
 
-.ally-img:hover {
+.ally-carousel .ally-img:hover {
     transform: scale(1.1);
 }
 
-@media (max-width: 576px) {
-    .ally-img {
+.ally-carousel .ally-member {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    /* Padding original para desktop */
+    margin: 0;
+    /* Elimina márgenes */
+}
+
+.ally-carousel .row {
+    flex-wrap: nowrap;
+    /* Logos en una sola fila para el carrusel */
+    margin: 0;
+    /* Elimina márgenes de Bootstrap */
+    gap: 0;
+    /* Elimina cualquier gap en la fila */
+}
+
+.ally-carousel .carousel-control-prev,
+.ally-carousel .carousel-control-next {
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    z-index: 15;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    /* Oculta flechas por defecto */
+    transition: opacity 0.3s ease;
+}
+
+.ally-carousel:hover .carousel-control-prev,
+.ally-carousel:hover .carousel-control-next {
+    opacity: 1;
+    /* Muestra flechas al pasar el mouse */
+}
+
+.ally-carousel .carousel-control-prev {
+    left: 20px;
+}
+
+.ally-carousel .carousel-control-next {
+    right: 20px;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .ally-carousel .ally-img {
         width: 120px;
+        /* Logos más pequeños para tabletas */
         height: 120px;
+    }
+
+    .ally-carousel .ally-member {
+        padding: 10px;
+        /* Padding reducido para tabletas */
     }
 }
 
-@media (min-width: 577px) and (max-width: 768px) {
-    .ally-img {
-        width: 130px;
-        height: 130px;
+@media (max-width: 576px) {
+    .ally-carousel .ally-img {
+        width: 90px;
+        /* Logos más pequeños para móviles */
+        height: 90px;
+    }
+
+    .ally-carousel .ally-member {
+        flex: 0 0 auto;
+        /* Anula el ancho de Bootstrap para móviles */
+        min-width: 80px;
+        /* Tamaño mínimo para que quepan 2-3 logos */
+        padding: 0;
+        /* Sin padding en móviles */
+        margin: 20px;
+        /* Sin márgenes */
+    }
+
+    .ally-carousel .col-sm-6 {
+        flex: 0 0 auto;
+        /* Anula el 50% de col-sm-6 */
+        width: auto;
+        /* Permite que el ancho sea dinámico */
+        max-width: none;
+        /* Elimina restricciones de ancho máximo */
+        padding: 0;
+        /* Elimina padding de columnas de Bootstrap */
+    }
+}
+
+/* Estilos para la sección de noticias */
+.news {
+    background-color: #f8f9fa;
+    color: #274B61;
+    /* Fondo oscuro consistente con bg-custom */
+}
+
+.news h2 {
+    color: #274B61;
+}
+
+.news-card {
+    background-color: #ffffff;
+    /* Fondo de las tarjetas */
+    border-color: #8d8d8d98;
+    border-radius: 10px;
+    box-shadow: #000;
+    color: #274b61;
+    /* Texto claro */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.news-card .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.news-card .card-text {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.news-card .btn-primary {
+    background-color: #274B61;
+    border: none;
+    align-items: center;
+}
+
+.news-card .btn-primary:hover {
+    background-color: #52AFA4;
+}
+
+.news-card .card-footer {
+    background-color: transparent;
+    border-top: none;
+    font-size: 0.9rem;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .news-card .card-title {
+        font-size: 1.1rem;
+    }
+
+    .news-card .card-text {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .news-card {
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -801,4 +1113,78 @@ body {
 
 .contenido-proyecto1 {
     color: #274b61;
+}
+
+.contact-section {
+    min-height: 600px;
+    position: relative;
+}
+
+.contact-bg-img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1
+}
+
+.call-to-action h2 {
+    color: #274b61;
+    margin: 20px;
+    font-size: 600;
+}
+
+.contact-links-1 {
+    margin: 3%;
+}
+
+.contact-links-1 a {
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.contact-links-1 i {
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+.icon-circle-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background-color: #274B61;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-links-1 a:hover i {
+    color: #52AFA4;
+}
+
+@media (max-width: 576px) {
+
+
+    .contact-links-1 li {
+        font-size: 1rem;
+        justify-content: center;
+    }
+
+    .contact-links-1 i {
+        font-size: 1.2rem;
+    }
+
+    .icon-circle-1 {
+        width: 30px;
+        height: 30px;
+    }
 }
