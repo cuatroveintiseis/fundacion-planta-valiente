@@ -801,7 +801,6 @@ body {
     align-items: center;
     justify-content: center;
     opacity: 1;
-    /* Siempre visibles */
     transition: background-color 0.3s ease;
 }
 
@@ -859,6 +858,11 @@ body {
 
     .ally-carousel .ally-member {
         padding: 10px;
+    }
+
+    .ally-carousel .carousel-control-prev:hover,
+    .ally-carousel .carousel-control-next:hover {
+        display: none;
     }
 
     .ally-carousel .carousel-control-prev,
