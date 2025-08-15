@@ -781,7 +781,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 25px;
+    padding: 15px;
     margin: 0;
 }
 
@@ -897,7 +897,7 @@ body {
     .ally-carousel .ally-member {
         flex: 0 0 33.33%;
         max-width: 33.33%;
-        padding: 0;
+        padding: 10px;
         margin: 0;
 
     }
