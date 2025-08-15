@@ -190,14 +190,14 @@ p {
 /* Ajustes para mobile */
 @media (max-width: 768px) {
     .navbar-brand img {
-        width: 80px;
+        width: 70px;
         /* Reducir tamaño del logo (original: 90px) */
-        height: 60px;
+        height: 50px;
         /* Reducir altura (original: 70px) */
     }
 
     s .navbar-brand span {
-        font-size: 1rem;
+        font-size: 0.8rem;
         /* Reducir tamaño del texto (original depende de h1) */
     }
 
