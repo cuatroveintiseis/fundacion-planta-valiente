@@ -235,9 +235,16 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-    const carousel = document.querySelector('#allyCarousel');
-    const bsCarousel = new bootstrap.Carousel(carousel, {
-        touch: true,
-        interval: false // Desactiva el autoavance para depender del swipe
-    });
+    if (window.innerWidth <= 768) {
+        const mobileCarousel = document.querySelector('#allyCarouselMobile');
+        if (mobileCarousel) {
+            const carousel = new bootstrap.Carousel(mobileCarousel, {
+                touch: true, // Habilitar swipe
+                ride: false // No iniciar automáticamente
+            });
+            // Forzar actualización del carrusel para activar eventos táctiles
+            carousel.cycle();
+            setTimeout(() => carousel.pause(), 0); // Pausar inmediatamente para mantener control manual
+        }
+    }
 });
