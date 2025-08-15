@@ -181,13 +181,6 @@ document.addEventListener('DOMContentLoaded', () => {
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
 
-// Formulario
-$(document).ready(function () {
-    $("#enviarCorreo").click(function (e) {
-        e.preventDefault(); // Evita el comportamiento por defecto del botón
-        alert("El mensaje fue enviado correctamente...");
-    });
-});
 
 // Contadores
 document.addEventListener('DOMContentLoaded', () => {
@@ -251,13 +244,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Cerrar navbar al hacer clic en un enlace en mobile
 const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+const dropdownItems = document.querySelectorAll('.dropdown-menu .dropdown-item');
 const navbarToggler = document.querySelector('.navbar-toggler');
 const navbarCollapse = document.querySelector('.navbar-collapse');
 
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
+        // Solo cerrar el navbar si el enlace no es un dropdown-toggle
+        if (!link.classList.contains('dropdown-toggle') && window.innerWidth <= 991) {
+            navbarToggler.click();
+        }
+    });
+});
+
+dropdownItems.forEach(item => {
+    item.addEventListener('click', () => {
+        // Cerrar el navbar cuando se selecciona un elemento del dropdown
         if (window.innerWidth <= 991) {
             navbarToggler.click();
         }
+    });
+});
+
+document.querySelector('.floating-home-btn').addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
     });
 });

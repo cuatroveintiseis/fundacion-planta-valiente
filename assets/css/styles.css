@@ -950,14 +950,15 @@ body {
 
 @media (max-width: 576px) {
     .ally-carousel .ally-img {
-        width: 90px;
-        height: 90px;
+        width: 100px;
+        height: 100px;
     }
 
     .ally-carousel .ally-member {
         flex: 0 0 33.33%;
         max-width: 33.33%;
-        padding: 10px;
+        padding-top: 15px;
+        padding-bottom: 15px;
         margin: 0;
 
     }
@@ -1283,5 +1284,43 @@ body {
     .icon-circle-1 {
         width: 30px;
         height: 30px;
+    }
+}
+
+.floating-home-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #52AFA4;
+    /* Color azul de Bootstrap, cámbialo según tu diseño */
+    color: white;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 1000;
+    /* Asegura que esté por encima de otros elementos */
+    transition: background-color 0.3s;
+}
+
+.floating-home-btn:hover {
+    background-color: #274B61;
+    /* Color más oscuro al pasar el ratón */
+}
+
+.floating-home-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Oculta el botón en pantallas grandes */
+@media (min-width: 992px) {
+    .floating-home-btn {
+        display: none;
     }
 }
