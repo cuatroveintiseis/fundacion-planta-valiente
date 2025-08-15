@@ -218,6 +218,8 @@ section.cards.bg-custom,
     background-color: #274b61;
 }
 
+
+
 .contenedor p {
     color: #ffffff;
     font-family: "Roboto", sans-serif;
@@ -741,11 +743,12 @@ body {
     position: relative;
     width: 100%;
     overflow: visible;
-    /* Cambiado de hidden a visible para evitar cortar indicadores */
     touch-action: pan-y pinch-zoom;
-    /* Habilita deslizamiento horizontal */
     padding-bottom: 50px;
-    /* Espacio adicional para indicadores */
+}
+
+#alianzas.bg-custom {
+    background-color: #274B61;
 }
 
 .ally-carousel .carousel-inner {
@@ -792,9 +795,8 @@ body {
 .ally-carousel .carousel-control-next {
     width: 50px;
     height: 50px;
-    top: 50%;
+    top: 45%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 50%;
     z-index: 15;
     display: flex;
@@ -806,7 +808,7 @@ body {
 
 .ally-carousel .carousel-control-prev:hover,
 .ally-carousel .carousel-control-next:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #274b61(0, 0, 0, 0.7);
 }
 
 .ally-carousel .carousel-control-prev {
@@ -820,7 +822,6 @@ body {
 .ally-carousel .carousel-indicators {
     position: absolute;
     bottom: -10px;
-    /* Ajustado para que los indicadores queden más arriba */
     left: 50%;
     transform: translateX(-50%);
     z-index: 15;
@@ -848,7 +849,6 @@ body {
 @media (max-width: 768px) {
     .ally-carousel {
         padding-bottom: 40px;
-        /* Espacio adicional para indicadores en móviles */
     }
 
     .ally-carousel .ally-img {
@@ -856,32 +856,37 @@ body {
         height: 120px;
     }
 
-    .ally-carousel .ally-member {
-        padding: 10px;
-    }
 
-    .ally-carousel .carousel-control-prev:hover,
-    .ally-carousel .carousel-control-next:hover {
-        display: none;
+    .ally-carousel .ally-member {
+        padding: 0;
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
     }
 
     .ally-carousel .carousel-control-prev,
     .ally-carousel .carousel-control-next {
         display: none;
+
     }
 
-
-    .ally-carousel .carousel-indicators {
-        bottom: -5px;
-        /* Ajustado para móviles */
-    }
-
-    .ally-carousel .carousel-indicators button {
-        width: 8px;
-        height: 8px;
-        margin: 0 4px;
-    }
 }
+
+
+.ally-carousel .carousel-indicators {
+    bottom: -5px;
+}
+
+.ally-carousel .carousel-indicators button {
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+}
+
+.desktop-only {
+    display: none;
+
+}
+
 
 @media (max-width: 576px) {
     .ally-carousel .ally-img {
@@ -890,39 +895,49 @@ body {
     }
 
     .ally-carousel .ally-member {
-        flex: 0 0 auto;
-        min-width: 80px;
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
         padding: 0;
-        margin: 20px;
+        margin: 0;
+
     }
 
     .ally-carousel .col-sm-6 {
-        flex: 0 0 auto;
-        width: auto;
-        max-width: none;
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
         padding: 0;
     }
 }
 
+
+
 /* Estilos para la sección de noticias */
 .news {
-    background-color: #f8f9fa;
+    background-color: #52AFA4;
     color: #274B61;
 
 }
 
 .news h2 {
-    color: #274B61;
+    color: #ffffff;
 }
 
 .news-card {
     background-color: #ffffff;
-    border-color: #8d8d8d98;
+    border-color: #f8f9fa;
     border-radius: 10px;
     box-shadow: #000;
     color: #274b61;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.news-card .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 
 .news-card:hover {
     transform: translateY(-5px);
@@ -954,6 +969,9 @@ body {
     background-color: transparent;
     border-top: none;
     font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Responsividad */

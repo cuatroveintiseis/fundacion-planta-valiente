@@ -310,103 +310,227 @@
         </div>
     </section>
 
-    <section class="cards py-5 bg-custom" id="destacados">
+    <!--ALIANZAS-->
+    <section class="cards py-5 bg-custom" id="alianzas">
         <div class="container text-center text-light">
             <h2 class="pb-3 roboto-bold" data-i18n="alliances.title">ALIANZAS</h2>
             <hr class="border-solid">
         </div>
         <div class="container">
-            <div id="allyCarousel" class="carousel slide ally-carousel" data-bs-ride="false">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#allyCarousel" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#allyCarousel" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                </div>
-                <div class="carousel-inner">
-                    <!-- Primer grupo de 5 logos -->
-                    <div class="carousel-item active">
-                        <div class="row justify-content-center">
-                            <div class="col-md-2 col-sm-6 ally-member">
-                                <a href="https://www.instagram.com/pitra_backpacks/" target="_blank"
-                                    rel="noopener noreferrer">
-                                    <img src="assets/img/PITRA LOGO sin fondo.jpg" alt="Logo de Pitra Backpacks"
-                                        class="ally-img">
-                                </a>
+            <!-- Versión para desktop: 2 slides, 5 logos cada uno, 2 indicadores -->
+            <div class="desktop-carousel d-none d-md-block">
+                <div id="allyCarousel" class="carousel slide ally-carousel" data-bs-ride="false" data-bs-touch="true">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#allyCarousel" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#allyCarousel" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <!-- Slide 1: 5 logos -->
+                        <div class="carousel-item active">
+                            <div class="row justify-content-center">
+                                <div class="col-md-2 col-sm-6 ally-member">
+                                    <a href="https://www.instagram.com/pitra_backpacks/" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <img src="assets/img/PITRA LOGO sin fondo.jpg" alt="Logo de Pitra Backpacks"
+                                            class="ally-img">
+                                    </a>
+                                </div>
+                                <div class="col-md-2 col-sm-6 ally-member">
+                                    <a href="https://www.austerra.org/" target="_blank" rel="noopener noreferrer">
+                                        <img src="assets/img/austerra.png" alt="Logo de Austerra" class="ally-img">
+                                    </a>
+                                </div>
+                                <div class="col-md-2 col-sm-6 ally-member">
+                                    <a href="https://www.instagram.com/valposup/?hl=en" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <img src="assets/img/valposup.jpg" alt="Logo de Valpo SUP" class="ally-img">
+                                    </a>
+                                </div>
+                                <div class="col-md-2 ally-member desktop-only">
+                                    <a href="https://www.instagram.com/diadelafaunacl/" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <img src="assets/img/fauna.png" alt="Logo de Día de la Fauna" class="ally-img">
+                                    </a>
+                                </div>
+                                <div class="col-md-2 ally-member desktop-only">
+                                    <a href="https://gofest.cl/" target="_blank" rel="noopener noreferrer">
+                                        <img src="assets/img/LOGO-ENCABEZADO-NOSOTROS.png" alt="Logo de Nueva Alianza"
+                                            class="ally-img">
+                                    </a>
+                                </div>
                             </div>
-                            <div class="col-md-2 col-sm-6 ally-member">
-                                <a href="https://www.austerra.org/" target="_blank" rel="noopener noreferrer">
-                                    <img src="assets/img/austerra.png" alt="Logo de Austerra" class="ally-img">
-                                </a>
-                            </div>
-                            <div class="col-md-2 col-sm-6 ally-member">
-                                <a href="https://www.instagram.com/valposup/?hl=en" target="_blank"
-                                    rel="noopener noreferrer">
-                                    <img src="assets/img/valposup.jpg" alt="Logo de Valpo SUP" class="ally-img">
-                                </a>
-                            </div>
-                            <div class="col-md-2 col-sm-6 ally-member">
-                                <a href="https://www.instagram.com/diadelafaunacl/" target="_blank"
-                                    rel="noopener noreferrer">
-                                    <img src="assets/img/fauna.png" alt="Logo de Fundación Lontra" class="ally-img">
-                                </a>
-                            </div>
-                            <div class="col-md-2 col-sm-6 ally-member">
-                                <a href="https://gofest.cl/" target="_blank" rel="noopener noreferrer">
-                                    <img src="assets/img/LOGO-ENCABEZADO-NOSOTROS.png" alt="Logo de Nueva Alianza"
-                                        class="ally-img">
-                                </a>
+                        </div>
+                        <!-- Slide 2: 5 logos -->
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div class="col-md-2 col-sm-6 ally-member">
+                                    <a href="https://fundacionlontra.org/" target="_blank" rel="noopener noreferrer">
+                                        <img src="assets/img/lontralogo.jpg" alt="Logo de Fundación Lontra"
+                                            class="ally-img">
+                                    </a>
+                                </div>
+                                <div class="col-md-2 col-sm-6 ally-member">
+                                    <a href="https://www.instagram.com/basepublica/" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <img src="assets/img/basepublica.jpg" alt="Logo de Base Pública"
+                                            class="ally-img">
+                                    </a>
+                                </div>
+                                <div class="col-md-2 col-sm-6 ally-member">
+                                    <a href="https://www.instagram.com/lasenda.cl/" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <img src="assets/img/lasenda.jpg" alt="Logo de La Senda" class="ally-img">
+                                    </a>
+                                </div>
+                                <div class="col-md-2 ally-member desktop-only">
+                                    <a href="https://www.instagram.com/racarocafe" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <img src="assets/img/racaro.jpg" alt="Logo de Racaro Café" class="ally-img">
+                                    </a>
+                                </div>
+                                <div class="col-md-2 ally-member desktop-only">
+                                    <a href="https://www.instagram.com/cafeteria_brisas_de_acapulco/" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <img src="assets/img/brisas.jpg" alt="Logo de Brisas de Acapulco"
+                                            class="ally-img">
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Segundo grupo de 5 logos -->
-                    <div class="carousel-item">
-                        <div class="row justify-content-center">
-                            <div class="col-md-2 col-sm-6 ally-member">
-                                <a href="https://fundacionlontra.org/" target="_blank" rel="noopener noreferrer">
-                                    <img src="assets/img/lontralogo.jpg" alt="Logo de Otra Alianza" class="ally-img">
-                                </a>
+                    <!-- Botones de navegación -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#allyCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden" data-i18n="carousel-item-ally.prev">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#allyCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden" data-i18n="carousel-item-ally.next">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Versión para mobile: 4 slides, grupos específicos, 4 indicadores, sin flechas, con swipe -->
+            <div class="mobile-carousel d-block d-md-none">
+                <div id="allyCarouselMobile" class="carousel slide ally-carousel" data-bs-ride="false"
+                    data-bs-touch="true">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#allyCarouselMobile" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#allyCarouselMobile" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#allyCarouselMobile" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#allyCarouselMobile" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <!-- Slide 1: pitra, valposup, austerra -->
+                        <div class="carousel-item active">
+                            <div class="row justify-content-center">
+                                <div class="col-4 ally-member">
+                                    <a href="https://www.instagram.com/pitra_backpacks/" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <img src="assets/img/PITRA LOGO sin fondo.jpg" alt="Logo de Pitra Backpacks"
+                                            class="ally-img">
+                                    </a>
+                                </div>
+                                <div class="col-4 ally-member">
+                                    <a href="https://www.instagram.com/valposup/?hl=en" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <img src="assets/img/valposup.jpg" alt="Logo de Valpo SUP" class="ally-img">
+                                    </a>
+                                </div>
+                                <div class="col-4 ally-member">
+                                    <a href="https://www.austerra.org/" target="_blank" rel="noopener noreferrer">
+                                        <img src="assets/img/austerra.png" alt="Logo de Austerra" class="ally-img">
+                                    </a>
+                                </div>
                             </div>
-                            <div class="col-md-2 col-sm-6 ally-member">
-                                <a href="https://www.instagram.com/basepublica/" target="_blank"
-                                    rel="noopener noreferrer">
-                                    <img src="assets/img/basepublica.jpg" alt="Logo de Pitra Backpacks"
-                                        class="ally-img">
-                                </a>
+                        </div>
+                        <!-- Slide 2: dia de la fauna, gofest, lontra -->
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div class="col-4 ally-member">
+                                    <a href="https://www.instagram.com/diadelafaunacl/" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <img src="assets/img/fauna.png" alt="Logo de Día de la Fauna" class="ally-img">
+                                    </a>
+                                </div>
+                                <div class="col-4 ally-member">
+                                    <a href="https://gofest.cl/" target="_blank" rel="noopener noreferrer">
+                                        <img src="assets/img/LOGO-ENCABEZADO-NOSOTROS.png" alt="Logo de Nueva Alianza"
+                                            class="ally-img">
+                                    </a>
+                                </div>
+                                <div class="col-4 ally-member">
+                                    <a href="https://fundacionlontra.org/" target="_blank" rel="noopener noreferrer">
+                                        <img src="assets/img/lontralogo.jpg" alt="Logo de Fundación Lontra"
+                                            class="ally-img">
+                                    </a>
+                                </div>
                             </div>
-                            <div class="col-md-2 col-sm-6 ally-member">
-                                <a href="https://www.instagram.com/lasenda.cl/" target="_blank"
-                                    rel="noopener noreferrer">
-                                    <img src="assets/img/lasenda.jpg" alt="Logo de Austerra" class="ally-img">
-                                </a>
+                        </div>
+                        <!-- Slide 3: base publica, lasenda, rocaro -->
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div class="col-4 ally-member">
+                                    <a href="https://www.instagram.com/basepublica/" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <img src="assets/img/basepublica.jpg" alt="Logo de Base Pública"
+                                            class="ally-img">
+                                    </a>
+                                </div>
+                                <div class="col-4 ally-member">
+                                    <a href="https://www.instagram.com/lasenda.cl/" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <img src="assets/img/lasenda.jpg" alt="Logo de La Senda" class="ally-img">
+                                    </a>
+                                </div>
+                                <div class="col-4 ally-member">
+                                    <a href="https://www.instagram.com/racarocafe" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <img src="assets/img/racaro.jpg" alt="Logo de Racaro Café" class="ally-img">
+                                    </a>
+                                </div>
                             </div>
-                            <div class="col-md-2 col-sm-6 ally-member">
-                                <a href="https://www.instagram.com/racarocafe" target="_blank"
-                                    rel="noopener noreferrer">
-                                    <img src="assets/img/racaro.jpg" alt="Logo de Valpo SUP" class="ally-img">
-                                </a>
-                            </div>
-                            <div class="col-md-2 col-sm-6 ally-member">
-                                <a href="https://www.instagram.com/cafeteria_brisas_de_acapulco/" target="_blank"
-                                    rel="noopener noreferrer">
-                                    <img src="assets/img/brisas.jpg" alt="Logo de Fundación Lontra" class="ally-img">
-                                </a>
+                        </div>
+                        <!-- Slide 4: brisas de acapulco -->
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div class="col-4 ally-member">
+                                    <a href="https://www.instagram.com/cafeteria_brisas_de_acapulco/" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <img src="assets/img/brisas.jpg" alt="Logo de Brisas de Acapulco"
+                                            class="ally-img">
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <!-- Botones de navegación (se ocultan en mobile vía CSS) -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#allyCarouselMobile"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden" data-i18n="carousel-item-ally.prev">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#allyCarouselMobile"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden" data-i18n="carousel-item-ally.next">Next</span>
+                    </button>
                 </div>
-                <!-- Botones de navegación -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#allyCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden" data-i18n="carousel-item-ally.prev">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#allyCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden" data-i18n="carousel-item-ally.next">Next</span>
-                </button>
             </div>
         </div>
     </section>
+
+
+
+
 
     <!--NOTICIAS-->
     <section class="news py-5 bg-custom" id="noticias">
@@ -426,7 +550,7 @@
                             <p class="card-text" data-i18n="news.1">La Fundación recorre Chile en una Kombi Volkswagen,
                                 llevando educación ambiental a escuelas y comunidades, promoviendo arte, deportes y
                                 conexión con la naturaleza.</p>
-                            <a href="https://www.austerra.org/fundacion-planta-valiente-ensenanza-ambiental-rutas-chile/"
+                            <a href="https://www.austerra.org/el-viaje-tambien-educa-y-transforma-fundacion-planta-valiente-ensena-conciencia-ambiental-por-las-rutas-de-chile/"
                                 target="_blank" rel="noopener noreferrer" class="btn btn-primary"
                                 data-i18n="news.button">Leer
                                 más</a>
@@ -447,7 +571,7 @@
                                 Valiente combina educación
                                 ambiental y limpieza de playas, fomentando la unión comunitaria y el cuidado del
                                 entorno.</p>
-                            <a href="https://www.basepublica.cl/planta-valiente-la-tienda-artesanal-itinerante-que-limpia-las-costas-de-chile-y-educa-sobre-biodiversidad/"
+                            <a href="https://www.basepublica.cl/la-planta-valiente-la-tienda-artesanal-itinerante-que-limpia-las-costas-de-chile-y-educa-sobre-biodiversidad/"
                                 target="_blank" rel="noopener noreferrer" class="btn btn-primary"
                                 data-i18n="news.button">Leer más</a>
                         </div>

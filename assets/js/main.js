@@ -22,7 +22,7 @@ const translations = {
         "carousel.prev": "Previous",
         "carousel.next": "Next",
         "about.title": "¿QUIÉNES SOMOS?",
-        "about.text1": "La Fundación Planta Valiente nace hace 3 años con la misión de reconectar a las personas con la naturaleza a través de la educación ambiental. Creemos que la educación es transversal y está presente en todas nuestras acciones, desde cómo nos comunicamos hasta cómo interactuamos con el entorno.",
+        "about.text1": "La Fundación Planta Valiente nace hace 4 años con la misión de reconectar a las personas con la naturaleza a través de la educación ambiental. Creemos que la educación es transversal y está presente en todas nuestras acciones, desde cómo nos comunicamos hasta cómo interactuamos con el entorno.",
         "about.text2": "Vivimos en el Antropoceno, una era en la que las acciones humanas han transformado el planeta. Esto nos obliga a actuar de manera urgente y consciente. Por ello, nuestras acciones se centran en movilizar cambios reales y directos a través de la educación y la conciencia ambiental.",
         "about.text3": "Nos movilizamos a nivel nacional, y aspiramos a una visión internacional, porque entendemos que la crisis ambiental es global y requiere un esfuerzo colectivo. A través de acciones como el reciclaje, la limpieza de playas y la educación, buscamos inspirar un cambio en la forma en que las personas se relacionan con el planeta.",
         "counter.beach": "Limpiezas de playas y ríos",
@@ -97,7 +97,7 @@ const translations = {
         "carousel.prev": "Previous",
         "carousel.next": "Next",
         "about.title": "WHO WE ARE",
-        "about.text1": "Planta Valiente Foundation was born 3 years go with the mission to reconnect people with nature through environmental education. We believe that education is transversal and present in all our actions, from how we communicate to how we interact with the environment.",
+        "about.text1": "Planta Valiente Foundation was born 4 years go with the mission to reconnect people with nature through environmental education. We believe that education is transversal and present in all our actions, from how we communicate to how we interact with the environment.",
         "about.text2": "We live in the Anthropocene, an era in which human actions have transformed the planet. This compels us to act urgently and consciously. Therefore, our actions focus on mobilizing real and direct change through education and environmental awareness.",
         "about.text3": "We operate nationally and aspire to an international vision, as we understand that the environmental crisis is global and requires a collective effort. Through actions such as recycling, beach cleanups, and education, we seek to inspire a change in how people relate to the planet.",
         "counter.beach": "Beach and river cleanups",
@@ -232,4 +232,12 @@ document.addEventListener('DOMContentLoaded', () => {
             counters.forEach(counter => animateCounter(counter));
         }
     }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const carousel = document.querySelector('#allyCarousel');
+    const bsCarousel = new bootstrap.Carousel(carousel, {
+        touch: true,
+        interval: false // Desactiva el autoavance para depender del swipe
+    });
 });
