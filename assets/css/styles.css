@@ -122,22 +122,28 @@ p {
 .dropdown-menu {
     background-color: #52AFA4;
     opacity: 80%;
-    border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
+    border: solid 1px white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 .dropdown-item {
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    /* Mantener sombra del texto */
 }
 
-.dropdown-item:hover {
-    background-color: #52AFA4;
-
-    color: #274b61;
+.dropdown-item:hover,
+.dropdown-item:focus {
+    font-weight: 700;
+    /* Igual que nav-link en hover */
+    color: #f8f9fa !important;
+    /* Igual que nav-link en hover */
+    background-color: transparent;
+    /* Evitar cambio de fondo */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    /* Mantener sombra del texto */
 }
 
 /* Ajustes para móvil */
@@ -178,6 +184,40 @@ p {
         text-align: center;
         width: 100%;
         margin: 5px 0;
+    }
+}
+
+/* Ajustes para mobile */
+@media (max-width: 768px) {
+    .navbar-brand img {
+        width: 80px;
+        /* Reducir tamaño del logo (original: 90px) */
+        height: 60px;
+        /* Reducir altura (original: 70px) */
+    }
+
+    s .navbar-brand span {
+        font-size: 1rem;
+        /* Reducir tamaño del texto (original depende de h1) */
+    }
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        /* Reducir espacio entre logo y texto */
+        margin-right: 10px;
+        /* Asegurar espacio para el toggler */
+    }
+
+    .navbar-toggler {
+        margin-left: auto;
+        /* Forzar el botón hamburguesa a la derecha */
+    }
+
+    .container {
+        flex-wrap: nowrap;
+        /* Evitar que los elementos se envuelvan */
     }
 }
 
@@ -988,6 +1028,13 @@ body {
 @media (max-width: 576px) {
     .news-card {
         margin-bottom: 1.5rem;
+    }
+
+    .news-card .btn-primary:hover {
+        background-color: #274B61;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+
     }
 }
 
