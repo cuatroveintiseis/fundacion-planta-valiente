@@ -248,3 +248,16 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
+
+// Cerrar navbar al hacer clic en un enlace en mobile
+const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+const navbarToggler = document.querySelector('.navbar-toggler');
+const navbarCollapse = document.querySelector('.navbar-collapse');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        if (window.innerWidth <= 991) {
+            navbarToggler.click();
+        }
+    });
+});

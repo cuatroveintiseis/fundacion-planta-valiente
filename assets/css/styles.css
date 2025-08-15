@@ -601,18 +601,20 @@ body {
     font-size: 1rem;
 }
 
-@media (max-width: 576px) {
+/* Ajustes para la sección de equipo en mobile */
+@media (max-width: 768px) {
     .team-img {
-        width: 120px;
-        height: 120px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        /* Sombra para profundidad */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        /* Suavizar transición */
     }
 
-    .team-member h5 {
-        font-size: 1.1rem;
-    }
-
-    .team-member p {
-        font-size: 0.9rem;
+    .team-img:hover {
+        transform: scale(1.1) translateY(-5px);
+        /* Elevación y leve agrandamiento */
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        /* Sombra más intensa en hover */
     }
 }
 
@@ -622,6 +624,8 @@ body {
         height: 130px;
     }
 }
+
+
 
 /* Estilos para las imágenes de proyectos en las tarjetas */
 .proyecto-img {
@@ -887,13 +891,29 @@ body {
 
 /* Ajustes para móviles */
 @media (max-width: 768px) {
-    .ally-carousel {
-        padding-bottom: 40px;
-    }
-
     .ally-carousel .ally-img {
         width: 120px;
         height: 120px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        /* Sombra más suave */
+        transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+        /* Transiciones suaves */
+    }
+
+    .ally-carousel .ally-img:hover {
+        transform: scale(1.05);
+        /* Escala sutil para hover */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        /* Sombra ligeramente más intensa */
+        filter: brightness(1.1);
+        /* Brillo sutil para destacar */
+    }
+
+    .ally-carousel .ally-member {
+        padding: 5px;
+        /* Reducir padding para más espacio */
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
     }
 
 
