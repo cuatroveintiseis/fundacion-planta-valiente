@@ -110,8 +110,8 @@ const translations = {
         "team.victoria.role": "Art Director",
         "team.cesar.name": "Cesar Coumerme",
         "team.cesar.role": "Sports Director",
-        "team.fabian.name": "Fabian González",
-        "team.fabian.role": "Co-founder",
+        "team.fabian.name": "Mauricio Suazo",
+        "team.fabian.role": "Lawyer",
         "projects.title": "PROJECTS IN ACTION",
         "carousel.slogan2.proyecto1": "ENVIRONMENTAL EDUCATION FROM COMMUNITY ACTION",
         "carousel.p.proyecto1": "Foundation Planta Valiente is promoting an educational and regional campaign to collect olive oil at home, targeting schools seeking to strengthen their environmental awareness and civic engagement in their communities. This concrete action is part of the Citizenship Education Plan, transforming school communities into true agents of change.",
@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
         counters.forEach(counter => animateCounter(counter));
     }
 
-    // Iniciar animación si la sección está visible al cargar
+    // Iniciar animación 
     const section = document.querySelector('.counter-section');
     if (section) {
         const rect = section.getBoundingClientRect();
@@ -232,12 +232,12 @@ document.addEventListener('DOMContentLoaded', function () {
         const mobileCarousel = document.querySelector('#allyCarouselMobile');
         if (mobileCarousel) {
             const carousel = new bootstrap.Carousel(mobileCarousel, {
-                touch: true, // Habilitar swipe
-                ride: false // No iniciar automáticamente
+                touch: true,
+                ride: false
             });
-            // Forzar actualización del carrusel para activar eventos táctiles
+            s
             carousel.cycle();
-            setTimeout(() => carousel.pause(), 0); // Pausar inmediatamente para mantener control manual
+            setTimeout(() => carousel.pause(), 0);
         }
     }
 });
@@ -266,6 +266,7 @@ dropdownItems.forEach(item => {
     });
 });
 
+// Boton home flotante solo visible en mobile
 document.querySelector('.floating-home-btn').addEventListener('click', () => {
     window.scrollTo({
         top: 0,

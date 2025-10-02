@@ -512,11 +512,11 @@ section.cards.bg-custom,
     }
 }
 
-/* Fondo del body */
 body {
     background-color: #000;
 }
 
+/* Contadores */
 .counter-section {
     padding: 150px 0;
     text-align: center;
@@ -564,6 +564,8 @@ body {
     object-fit: cover;
 }
 
+/* Team */
+
 .team-section.bg-custom {
     background-color: #52AFA4;
 }
@@ -605,16 +607,12 @@ body {
 @media (max-width: 768px) {
     .team-img {
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        /* Sombra para profundidad */
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        /* Suavizar transición */
     }
 
     .team-img:hover {
         transform: scale(1.1) translateY(-5px);
-        /* Elevación y leve agrandamiento */
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-        /* Sombra más intensa en hover */
     }
 }
 
@@ -713,6 +711,7 @@ body {
     }
 }
 
+/* Frase con imagen de fondo */
 .quote-section {
     position: relative;
     min-height: 500px;
@@ -835,6 +834,10 @@ body {
     gap: 0;
 }
 
+.desktop-carousel .carousel-item:last-child .row {
+    justify-content: center;
+}
+
 .ally-carousel .carousel-control-prev,
 .ally-carousel .carousel-control-next {
     width: 50px;
@@ -852,7 +855,7 @@ body {
 
 .ally-carousel .carousel-control-prev:hover,
 .ally-carousel .carousel-control-next:hover {
-    background-color: #274b61(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .ally-carousel .carousel-control-prev {
@@ -895,30 +898,17 @@ body {
         width: 120px;
         height: 120px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-        /* Sombra más suave */
         transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
-        /* Transiciones suaves */
     }
 
     .ally-carousel .ally-img:hover {
         transform: scale(1.05);
-        /* Escala sutil para hover */
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        /* Sombra ligeramente más intensa */
         filter: brightness(1.1);
-        /* Brillo sutil para destacar */
     }
 
     .ally-carousel .ally-member {
         padding: 5px;
-        /* Reducir padding para más espacio */
-        flex: 0 0 33.33%;
-        max-width: 33.33%;
-    }
-
-
-    .ally-carousel .ally-member {
-        padding: 0;
         flex: 0 0 33.33%;
         max-width: 33.33%;
     }
@@ -926,11 +916,15 @@ body {
     .ally-carousel .carousel-control-prev,
     .ally-carousel .carousel-control-next {
         display: none;
-
     }
 
+    /* Ajuste para el cuarto slide en mobile (2 logos) */
+    .mobile-carousel .carousel-item:last-child .ally-member {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 5px;
+    }
 }
-
 
 .ally-carousel .carousel-indicators {
     bottom: -5px;
@@ -944,9 +938,7 @@ body {
 
 .desktop-only {
     display: none;
-
 }
-
 
 @media (max-width: 576px) {
     .ally-carousel .ally-img {
@@ -960,7 +952,13 @@ body {
         padding-top: 15px;
         padding-bottom: 15px;
         margin: 0;
+    }
 
+
+    .mobile-carousel .carousel-item:last-child .ally-member {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 10px;
     }
 
     .ally-carousel .col-sm-6 {
@@ -971,8 +969,7 @@ body {
 }
 
 
-
-/* Estilos para la sección de noticias */
+/* Sección Noticias */
 .news {
     background-color: #52AFA4;
     color: #274B61;
@@ -1178,6 +1175,7 @@ body {
     }
 }
 
+/* Sección Footer */
 .footer-section {
     background-color: #52AFA4;
     font-family: "Roboto", sans-serif;
@@ -1212,6 +1210,8 @@ body {
 .contenido-proyecto1 {
     color: #274b61;
 }
+
+/* Contacto */
 
 .contact-section {
     min-height: 600px;
@@ -1287,6 +1287,7 @@ body {
     }
 }
 
+/* Botón Home flotante visible solo en mobile */
 .floating-home-btn {
     position: fixed;
     bottom: 20px;
@@ -1294,7 +1295,6 @@ body {
     width: 50px;
     height: 50px;
     background-color: #52AFA4;
-    /* Color azul de Bootstrap, cámbialo según tu diseño */
     color: white;
     border-radius: 50%;
     border: none;
@@ -1304,13 +1304,12 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     z-index: 1000;
-    /* Asegura que esté por encima de otros elementos */
     transition: background-color 0.3s;
 }
 
 .floating-home-btn:hover {
     background-color: #274B61;
-    /* Color más oscuro al pasar el ratón */
+
 }
 
 .floating-home-btn svg {
@@ -1318,9 +1317,19 @@ body {
     height: 24px;
 }
 
-/* Oculta el botón en pantallas grandes */
+/* Se oculta el botón en pantallas grandes */
 @media (min-width: 992px) {
     .floating-home-btn {
         display: none;
     }
+}
+
+.custom-container {
+    max-width: 1232px;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+
 }
