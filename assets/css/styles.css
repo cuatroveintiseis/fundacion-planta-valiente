@@ -120,7 +120,7 @@ p {
 
 /* Estilos para el dropdown */
 .dropdown-menu {
-    background-color: #52AFA4;
+    background-color: #58afa9;
     opacity: 80%;
     border: solid 1px white;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
@@ -234,16 +234,25 @@ p {
 }
 
 .btn-custom {
-    background-color: #52AFA4;
-    border-radius: 25px;
+    background-color: #58afa9;
+    border-radius: 30px;
+    /* aumentado un poco */
     color: white;
-    padding: 20px;
-    margin-top: 20px;
+    padding: 18px 60px;
+    /* más control: arriba/abajo | izquierda/derecha */
+    margin-top: 50px;
     text-decoration: none;
     display: inline-block;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    font-size: 1.35rem;
+    /* ← Esto agranda el texto */
+    font-weight: 700;
+    /* más grueso */
+    letter-spacing: 0.5px;
+    /* opcional: más elegante */
+    min-width: 280px;
+    /* para que no se haga muy pequeño en móviles */
 }
 
 .btn-custom:hover {
@@ -255,7 +264,7 @@ p {
 section.contenedor.bg-custom,
 section.cards.bg-custom,
 .team-section.bg-custom {
-    background-color: #274b61;
+    background-color: #2b3a57;
 }
 
 
@@ -268,7 +277,7 @@ section.cards.bg-custom,
 
 .contenedor i {
     font-size: 40px;
-    background-color: #274B61;
+    background-color: #2b3a57;
     padding: 5px;
 }
 
@@ -400,8 +409,12 @@ section.cards.bg-custom,
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.6);
     z-index: 1;
+}
+
+.carousel-item.no-overlay::before {
+    background-color: transparent !important;
 }
 
 .carousel-img {
@@ -465,7 +478,7 @@ section.cards.bg-custom,
 }
 
 .proyecto-1 img {
-    border: 3px solid #52AFA4;
+    border: 3px solid #58afa9;
     border-radius: 15px;
     max-width: 600px;
     width: 100%;
@@ -527,7 +540,7 @@ body {
 .counter {
     font-size: 3rem;
     font-weight: bold;
-    color: #274B61;
+    color: #2b3a57;
 }
 
 .counter-label {
@@ -567,7 +580,7 @@ body {
 /* Team */
 
 .team-section.bg-custom {
-    background-color: #52AFA4;
+    background-color: #58afa9;
 }
 
 .team-member {
@@ -651,12 +664,12 @@ body {
 }
 
 .projects-section h2 {
-    color: #274B61;
+    color: #2b3a57;
     margin-bottom: 1rem;
 }
 
 .projects-section h5 {
-    color: #274B61;
+    color: #2b3a57;
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-size: 20px;
@@ -664,7 +677,7 @@ body {
 }
 
 .projects-section p {
-    color: #274B61;
+    color: #2b3a57;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 1rem;
@@ -675,7 +688,7 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    background-color: #274B61;
+    background-color: #2b3a57;
     color: #ffffff;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
@@ -791,7 +804,7 @@ body {
 }
 
 #alianzas.bg-custom {
-    background-color: #274B61;
+    background-color: #2b3a57;
 }
 
 .ally-carousel .carousel-inner {
@@ -971,8 +984,8 @@ body {
 
 /* Sección Noticias */
 .news {
-    background-color: #52AFA4;
-    color: #274B61;
+    background-color: #58afa9;
+    color: #2b3a57;
 
 }
 
@@ -985,7 +998,7 @@ body {
     border-color: #f8f9fa;
     border-radius: 10px;
     box-shadow: #000;
-    color: #274b61;
+    color: #2b3a57;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -1013,14 +1026,14 @@ body {
 }
 
 .news-card .btn-primary {
-    background-color: #274B61;
+    background-color: #2b3a57;
     border: none;
     align-items: center;
     text-align: center;
 }
 
 .news-card .btn-primary:hover {
-    background-color: #52AFA4;
+    background-color: #58afa9;
 }
 
 .news-card .card-footer {
@@ -1049,7 +1062,7 @@ body {
     }
 
     .news-card .btn-primary:hover {
-        background-color: #274B61;
+        background-color: #2b3a57;
         transform: translateY(-2px);
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 
@@ -1124,7 +1137,7 @@ body {
     justify-content: center;
     width: 50px;
     height: 50px;
-    background-color: #52AFA4;
+    background-color: #58afa9;
     border-radius: 50%;
     margin-right: 10px;
     transition: background-color 0.3s ease;
@@ -1177,7 +1190,7 @@ body {
 
 /* Sección Footer */
 .footer-section {
-    background-color: #52AFA4;
+    background-color: #2b3a57;
     font-family: "Roboto", sans-serif;
     min-height: 80px;
     display: flex;
@@ -1266,7 +1279,7 @@ body {
 }
 
 .contact-links-1 a:hover i {
-    color: #52AFA4;
+    color: #58afa9;
 }
 
 @media (max-width: 576px) {
@@ -1294,7 +1307,7 @@ body {
     right: 20px;
     width: 50px;
     height: 50px;
-    background-color: #52AFA4;
+    background-color: #58afa9;
     color: white;
     border-radius: 50%;
     border: none;
