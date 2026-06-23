@@ -1179,8 +1179,8 @@ body {
 
 @media (max-width: 576px) {
     .contact-logo {
-        width: 120px;
-        height: 120px;
+        width: 250px;
+        height: 250px;
     }
 
     .contact-links li {
