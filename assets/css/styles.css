@@ -236,23 +236,36 @@ p {
 .btn-custom {
     background-color: #58afa9;
     border-radius: 30px;
-    /* aumentado un poco */
     color: white;
     padding: 18px 60px;
-    /* más control: arriba/abajo | izquierda/derecha */
     margin-top: 50px;
     text-decoration: none;
     display: inline-block;
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     font-size: 1.35rem;
-    /* ← Esto agranda el texto */
     font-weight: 700;
-    /* más grueso */
     letter-spacing: 0.5px;
-    /* opcional: más elegante */
     min-width: 280px;
-    /* para que no se haga muy pequeño en móviles */
+}
+
+/* ==================== MOBILE ==================== */
+@media (max-width: 768px) {
+    .btn-custom {
+        padding: 14px 40px;
+        font-size: 1.1rem;
+        min-width: 220px;
+        margin-top: 35px;
+        border-radius: 25px;
+    }
+}
+
+@media (max-width: 576px) {
+    .btn-custom {
+        padding: 12px 35px;
+        font-size: 1rem;
+        min-width: 200px;
+    }
 }
 
 .btn-custom:hover {
@@ -281,21 +294,7 @@ section.cards.bg-custom,
     padding: 5px;
 }
 
-/* Contenedor del video para móviles */
-.mobile-video-container {
-    position: relative;
-    width: 100%;
-    padding-top: 177.78%;
-    display: none;
 
-}
-
-/* Mostrar video solo en móviles */
-@media (max-width: 991px) {
-    .mobile-video-container {
-        display: block !important;
-    }
-}
 
 .carousel-control-prev,
 .carousel-control-next {
@@ -327,24 +326,70 @@ section.cards.bg-custom,
 
 }
 
-/* Video */
-.carousel-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    z-index: 0;
-}
-
 /* Carrusel solo para escritorio */
 .carousel-desktop {
     position: relative;
     width: 100%;
     overflow: hidden;
     background-color: #000;
+}
+
+/* === CARRUSEL RESPONSIVO === */
+.carousel-desktop {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #000;
+}
+
+/* Asegurar que se vea en móviles */
+@media (max-width: 991px) {
+    .carousel-desktop {
+        display: block !important;
+    }
+}
+
+/* Aspect ratio más adecuado para móviles */
+.carousel-item {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    /* 16:9 */
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        padding-top: 70%;
+        /* más alto en móviles (mejor proporción) */
+    }
+}
+
+/* Controles más grandes y visibles en móvil */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 45px;
+        height: 45px;
+        opacity: 1;
+    }
+
+    .carousel-control-prev {
+        left: 10px;
+    }
+
+    .carousel-control-next {
+        right: 10px;
+    }
 }
 
 .carousel-proyecto1 {
@@ -368,25 +413,6 @@ section.cards.bg-custom,
     margin-right: auto;
 }
 
-/* Ajustes para móviles */
-@media (max-width: 991px) {
-    .carousel-proyecto1 .carousel-item {
-        padding-top: 75%;
-
-    }
-}
-
-/* Ocultar carrusel en móviles */
-@media (max-width: 991px) {
-    .carousel-desktop {
-        display: none !important;
-    }
-
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-        display: none;
-    }
-}
 
 .carousel-inner {
     position: relative;
@@ -1224,79 +1250,36 @@ body {
     color: #274b61;
 }
 
-/* Contacto */
-
+/* ==================== CONTACTO ==================== */
 .contact-section {
-    min-height: 600px;
     position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 650px;
+    /* Desktop */
+    overflow: hidden;
 }
 
-.contact-bg-img {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1
+.contact-overlay {
+    background-color: rgba(0, 0, 0, 0.55);
+    /* ajusta la oscuridad si quieres */
+    z-index: 2;
 }
 
-.call-to-action h2 {
-    color: #274b61;
-    margin: 20px;
-    font-size: 600;
-}
-
-.contact-links-1 {
-    margin: 3%;
-}
-
-.contact-links-1 a {
-    color: #ffffff;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    transition: color 0.3s ease, font-weight 0.3s ease;
-}
-
-.contact-links-1 i {
-    color: #ffffff;
-    font-size: 2rem;
-}
-
-.icon-circle-1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 70px;
-    height: 70px;
-    background-color: #274B61;
-    border-radius: 50%;
-    margin-right: 10px;
-    transition: background-color 0.3s ease;
-}
-
-.contact-links-1 a:hover i {
-    color: #58afa9;
+/* ==================== MOBILE ==================== */
+@media (max-width: 768px) {
+    .contact-section {
+        min-height: 820px !important;
+        /* Mucho más alto */
+        background-position: center 30%;
+        /* Ajusta según tu imagen */
+    }
 }
 
 @media (max-width: 576px) {
-
-
-    .contact-links-1 li {
-        font-size: 1rem;
-        justify-content: center;
-    }
-
-    .contact-links-1 i {
-        font-size: 1.2rem;
-    }
-
-    .icon-circle-1 {
-        width: 30px;
-        height: 30px;
+    .contact-section {
+        min-height: 780px !important;
     }
 }
 
