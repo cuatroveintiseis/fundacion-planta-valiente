@@ -1086,6 +1086,13 @@ body {
         display: none;
     }
 
+    @media (max-width: 768px) {
+    .ally-carousel .carousel-item {
+        height: auto;
+        min-height: auto;
+    }
+}
+
     /* Ajuste para el cuarto slide en mobile (2 logos) */
     .mobile-carousel .carousel-item:last-child .ally-member {
         flex: 0 0 50%;
