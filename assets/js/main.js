@@ -8,6 +8,7 @@ const translations = {
         "navbar.team": "Equipo",
         "navbar.projects": "Proyectos",
         "navbar.projects.all": "Todos",
+        "navbar.projects0": "Centro de Operaciones",
         "navbar.projects1": "Recolección de Aceites",
         "navbar.projects2": "Actividades Medio Ambientales",
         "navbar.projects3": "Aulas Libres",
@@ -54,7 +55,7 @@ const translations = {
         "projects.carpe.title": "Aulas Libres",
         "projects.carpe.text": "La corporación educativa Carpe Diem, es administradora de la escuela Mariano Latorre dónde el director de la fundación se desempeña como Sostenedor.",
         "projects.viewmore": "Ver más",
-        "quote.text": "\"La organización territorial como motor de cambio.\"",
+        "quote.text": "Testamento Fundación Planta Valiente al Derecho Ambiental",
         "alliances.title": "ALIANZAS",
         "contact.title": "¿TE GUSTARÍA COLABORAR CON NOSOTROS?",
         "contact.instagram": "@laplantavaliente",
@@ -71,6 +72,8 @@ const translations = {
         "carousel.slogan3.proyecto1": "¿Te gustaría participar con tu establecimiento?",
         "carousel.slogan3.proyecto2": "¡Únete a nosotros y sé parte del cambio!",
         "carousel.slogan3.proyecto3": "¿Te gustaría saber más?",
+        "button.centro": "NUEVO CENTRO DE OPERACIONES",
+        "button.aulas": "AULAS LIBRES",
         "button.rutascosteras": "PRÓXIMAS ACTIVIDADES"
     },
     en: {
